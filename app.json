@@ -1,6 +1,6 @@
 {
   "expo": {
-    "name": "TechNew",
+    "name": "Quake🔥",
     "slug": "TechNew",
     "version": "1.0.0",
     "orientation": "portrait",
@@ -17,16 +17,19 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.penielny.TechNew"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#FFFFFF"
-      }
+      },
+      "package": "com.penielny.TechNew"
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "description": ""
   }
 }
