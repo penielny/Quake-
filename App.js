@@ -17,7 +17,7 @@ export default function App() {
             name="Home"
             options={{
               headerTitleAlign: "center",
-              title: "Quake🔥",
+              title: "Quake",
               headerRight: () => <HeaderRight />,
             }}
             component={Home}
@@ -26,7 +26,7 @@ export default function App() {
             name="Details"
             options={{
               headerTitleAlign: "center",
-              title: "Quake🔥",
+              title: "Quake",
               headerRight: () => <HeaderRight />,
             }}
             component={Details}
@@ -35,10 +35,17 @@ export default function App() {
             name="Search"
             options={{
               headerTitleAlign: "center",
-              title: "Quake🔥",
+              title: "Quake",
               headerRight: () => <HeaderRight close />,
             }}
             component={Search}
+          />
+          <Stack.Screen
+            name="image"
+            options={{
+              headerShown: false,
+            }}
+            component={ImageScreen}
           />
         </Stack.Navigator>
       </NewsProvider>
@@ -48,23 +55,23 @@ export default function App() {
 
 import { Ionicons } from "@expo/vector-icons";
 import { TouchableOpacity } from "react-native";
-import { useNavigation } from '@react-navigation/native';
+import { useNavigation } from "@react-navigation/native";
 import Search from "./src/screens/search";
-function HeaderRight({close}) {
+import ImageScreen from "./src/screens/image";
+function HeaderRight({ close }) {
   const navigation = useNavigation();
   return (
-    <TouchableOpacity 
-    style={{ margin: 10 }}
-    onPress={() => {
-      if(!close){
-        navigation.navigate("Search")
-      }else{
-        navigation.goBack();
-      }
-    }}
+    <TouchableOpacity
+      style={{ margin: 10 }}
+      onPress={() => {
+        if (!close) {
+          navigation.navigate("Search");
+        } else {
+          navigation.goBack();
+        }
+      }}
     >
-      <Ionicons name={close?"close" : "search"} size={20} 
-       />
+      <Ionicons name={close ? "close" : "search"} size={20} />
     </TouchableOpacity>
   );
 }

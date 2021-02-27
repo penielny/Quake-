@@ -11,6 +11,7 @@ export default function NewsCard({ data, navigation }) {
   };
   return (
     <TouchableOpacity
+    onLongPress={(e)=>navigation.navigate('image',{image_url:data})}
       onPress={() => fecthFullArticle(data.href,cb)}
       style={styles.cardContainer}
     >

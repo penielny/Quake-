@@ -30,15 +30,18 @@ export default function Search({ navigation }) {
         style={{
           margin: 3,
           borderWidth: 0.5,
-          borderRadius: 5,
+          borderRadius: 510,
           display: "flex",
           alignItems: "center",
           flexDirection: "row",
           marginVertical: 10,
+          backgroundColor:"#fff",
+          borderColor:"#fff",
+          paddingHorizontal:5
         }}
       >
         <TextInput
-          placeholder="Search New ...."
+          placeholder="Search News..."
           style={{ padding: 10, flex: 1 }}
           onChangeText={setSearchtext}
         />
